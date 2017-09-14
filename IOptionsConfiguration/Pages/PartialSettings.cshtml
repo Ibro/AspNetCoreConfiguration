@@ -1,0 +1,18 @@
+﻿@page
+@model PartialSettings
+@{
+    ViewData["Title"] = "Partial settings via IOptions<MessagesOptions>";
+}
+
+<h1>Partial settings via IOptions<MessagesOptions></h1>
+
+<span>Regular message:</span>
+<label>@Model.Messages.RegularMessage</label>
+
+@if (Model.Messages.ShouldShowAlert)
+{
+    <div>
+        <span>Alert message:</span>
+        <label>@Model.Messages.AlertMessage</label>
+    </div>
+}

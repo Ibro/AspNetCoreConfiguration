@@ -1,0 +1,23 @@
+﻿@page
+@model Index
+@{
+    ViewData["Title"] = "Full Settings";
+}
+
+<h1>Full Settings</h1>
+
+MainMessageFromConfig:
+<label>
+    <strong>
+        @Model.MainMessageFromConfig
+    </strong>
+</label>
+
+@if (Model.Messages.ShouldShowAlert)
+{
+    <div>
+        <span>Alert message:</span>
+        <label>@Model.Messages.AlertMessage</label>
+    </div>
+}
+Regular message: @Model.Messages.RegularMessage
